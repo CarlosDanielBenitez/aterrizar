@@ -1,0 +1,31 @@
+.nav{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: #836096;
+    align-items: center;
+    position: fixed;
+}
+
+.navTitle{
+    font-weight: 600;
+    font-size: 1.3rem;
+    cursor: pointer;
+}
+.navList{
+    font-size: 1rem;
+display: flex;
+column-gap: 1.5rem;
+width: 100%;
+justify-content: space-around;
+margin: 10px 0;
+}
+.navList li a:hover{
+    transition: all .3s ease-in-out;
+    font-size: 1.05rem;
+    color: #fff;
+}
+
+
+
+
