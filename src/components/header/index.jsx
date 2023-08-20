@@ -1,8 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { Divide as Hamburger } from 'hamburger-react';
 import './styles.css';
+import { useNavigate } from 'react-router-dom';
+
 
 export const NavBar = () => {
+    const navigate = useNavigate();
     const [isOpen, setOpen] = useState(false);
     const [isLargeScreen, setIsLargeScreen] = useState(window.innerWidth >= 768);
 
@@ -14,7 +17,7 @@ export const NavBar = () => {
         const handleResize = () => {
             setIsLargeScreen(window.innerWidth >= 768);
             if (window.innerWidth >= 768) {
-                setOpen(false); // Cerrar el menú hamburguesa en pantallas grandes
+                setOpen(false);
             }
         };
 
@@ -27,28 +30,24 @@ export const NavBar = () => {
 
     return (
         <div className='nav'>
-            <h2 className='navTitle'>Aterrizar</h2>
+            <li className='navTitle'>Aterrizar</li>
             {isLargeScreen ? (
                 <ul className='navList'>
-                    <li><a href="">Acerca de</a></li>
-                    <li><a href="">Vuelos</a></li>
-                    <li><a href="">Hoteles</a></li>
-                    <li><a href="">Contacto</a></li>
+                    <li onClick={() => navigate('/vuelos')}>Vuelos</li>
+                    <li onClick={()=> navigate('/contact')} >Contacto</li>
                 </ul>
             ) : (
                 <Hamburger
                     toggled={isOpen} toggle={toggleMenu}
                     duration={0.8}
                     color="#4FD1C5"
-                />
-            )}
+                    />
+                    )}
 
             {isOpen && !isLargeScreen && (
                 <ul className='navList'>
-                    <li><a href="">Acerca de</a></li>
-                    <li><a href="">Vuelos</a></li>
-                    <li><a href="">Hoteles</a></li>
-                    <li><a href="">Contacto</a></li>
+                    <li onClick={() => navigate('/vuelos')}>Vuelos</li>
+                    <li onClick={()=> navigate('/contact')} >Contacto</li>
                 </ul>
             )}
         </div>
