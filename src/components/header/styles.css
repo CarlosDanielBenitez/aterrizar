@@ -5,24 +5,25 @@
     background-color: #836096;
     align-items: center;
     position: fixed;
-  
+    
 }
 
 .navTitle{
     font-weight: 600;
     font-size: 1.3rem;
-  
+    
 }
 
 .navList{
     font-size: 1rem;
-display: flex;
-column-gap: 1.5rem;
-width: 100%;
-justify-content: space-around;
-margin: 10px 0;
+    display: flex;
+    column-gap: 1.5rem;
+    width: 100%;
+    justify-content: space-around;
+    margin: 10px 0;
 }
 .navList li:hover{
+
     transition: all .3s ease-in-out;
     font-size: 1.05rem;
     color: #fff;
