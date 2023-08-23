@@ -1,0 +1,22 @@
+.flightsContainer{
+display: flex;
+flex-direction: column;
+padding-top: 35%;
+row-gap: 2rem;
+padding-left: 10px;
+}
+
+.flightsDestinations{
+display: flex;
+flex-direction: column;
+row-gap: .5rem;
+padding-bottom: 1rem;
+}
+
+.flightsTickets{
+display: flex;
+flex-direction: column;
+row-gap: .5rem;
+
+}
+

@@ -12,3 +12,15 @@ a{
     text-decoration: none;
 }
 
+button{
+    border: none;
+    padding: .4rem;
+    width: max-content;
+    border-radius: 1rem;
+
+
+}
+button:hover{
+    transform: scale(1.07);
+}
+
