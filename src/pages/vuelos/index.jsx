@@ -10,10 +10,10 @@ const Vuelos = () => {
   const [total, setTotal] = useState(0);
 
   const destinations = [
-    { name: 'Buenos Aires, Argentina', price: 200 },
-    { name: 'Miami, E.E.U.U', price: 400 },
-    { name: 'Berlin, Alemania', price: 300 },
-    { name: 'Cancun, Mexico', price: 350 },
+    { name: 'Buenos Aires, Argentina', price: 1000 },
+    { name: 'Miami, E.E.U.U', price: 2000 },
+    { name: 'Berlin, Alemania', price: 3000 },
+    { name: 'Cancun, Mexico', price: 4000 },
   ];
 
   // Funciones para manejar los cambios en las entradas
@@ -39,8 +39,8 @@ const Vuelos = () => {
 
   // Calcula el total en base a los pasajeros y el destino seleccionado
   const calculateTotal = () => {
-    const adultPrice = 100; // Precio por adulto
-    const childPrice = 50;  // Precio por niño
+    const adultPrice = 1000; // Precio por adulto
+    const childPrice = 500;  // Precio por niño
     const selectedDestinationInfo = destinations.find(dest => dest.name === destination);
 
     if (selectedDestinationInfo) {

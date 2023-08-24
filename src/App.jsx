@@ -4,7 +4,7 @@ import { NavBar } from './components/header'
 import ContactForm from './pages/contact';
 import Vuelos from './pages/vuelos';
 import { Counter } from './components/counter';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Input } from './components/input';
 
 
@@ -47,17 +47,26 @@ function App() {
     setActive(false);
   }
 
-  const inputClass =  `container ${active ? active : ''}`
+useEffect(() => {
+  console.log("Hi function useEffect mount..");
+
+  return () => {
+    console.log("Dismount..");
+  }
+}, [])
+
+  const inputClass = `container ${active ? active : ''}`
 
   return (
 
 
     <Router>
-      <div className="app">
+      <>
         <NavBar />
 
 
         <Routes>
+          <Route path='/' element={<NavBar />} />
           <Route path="/contact" element={<ContactForm />} />
           <Route path='/vuelos' element={<Vuelos />} />
         </Routes>
@@ -65,7 +74,7 @@ function App() {
         <Counter isValidCounter={isValidCounter} counter={counter} onDecrementCounter={onDecrementCounter} onIncrementCounter={onIncrementCounter} />
 
         <Input
-         placeholder='Add a new task'
+          placeholder='Add a new task'
           id='task'
           required={true}
           onChange={onChange}
@@ -73,9 +82,9 @@ function App() {
           onBlur={onBlur}
           className={inputClass}
           name='Task'
-          />
-        
-      </div >
+        />
+
+      </ >
     </Router>
 
 

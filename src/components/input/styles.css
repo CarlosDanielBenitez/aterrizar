@@ -23,6 +23,10 @@
     color: rgba(232, 230, 230, 0.8);
 }
 
+.container.true input::-webkit-input-placeholder{
+   color:   #9e7cb1d0;
+
+}
 .container input::-moz-placeholder{
     color: rgba(232, 230, 230, 0.8);
     
@@ -61,7 +65,7 @@
 }
 
 .container.true input{
-    background-color: #60049696;
+    background-color: C;
 }
 .container.true input + label{
     top: 0;
