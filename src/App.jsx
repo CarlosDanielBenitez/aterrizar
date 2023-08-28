@@ -3,9 +3,10 @@ import './App.css'
 import { NavBar } from './components/header'
 import ContactForm from './pages/contact';
 import Vuelos from './pages/vuelos';
-import { Counter } from './components/counter';
+// import { Counter } from './components/counter';
 import { useEffect, useState } from 'react';
-import { Input } from './components/input';
+// import { Input } from './components/input';
+import { Custom } from './components/custom';
 
 
 
@@ -17,22 +18,24 @@ import { Input } from './components/input';
 function App() {
   const [task, setTask] = useState('');
   const [active, setActive] = useState(false);
+  
 
-  // Counter
-  const [counter, setCounter] = useState(0);
-  const isValidCounter = counter > 0;
+  
+  //* Counter
+  // const [counter, setCounter] = useState(0);
+  // const isValidCounter = counter > 0;
 
-  const onIncrementCounter = () => {
-    setCounter(prevValue => prevValue + 1)
-  }
+  // const onIncrementCounter = () => {
+  //   setCounter(prevValue => prevValue + 1)
+  // }
 
-  const onDecrementCounter = () => {
-    if (!isValidCounter) return;
-    setCounter(prevValue => prevValue - 1)
+  // const onDecrementCounter = () => {
+  //   if (!isValidCounter) return;
+  //   setCounter(prevValue => prevValue - 1)
 
-  }
+  // }
 
-  //Input
+  //*Input
 
   const onChange = (event) => {
     const value = event.target.value;
@@ -57,20 +60,21 @@ useEffect(() => {
 
   const inputClass = `container ${active ? active : ''}`
 
+
   return (
 
 
     <Router>
       <>
         <NavBar />
-
+      
 
         <Routes>
           <Route path='/' element={<NavBar />} />
           <Route path="/contact" element={<ContactForm />} />
           <Route path='/vuelos' element={<Vuelos />} />
         </Routes>
-
+{/* 
         <Counter isValidCounter={isValidCounter} counter={counter} onDecrementCounter={onDecrementCounter} onIncrementCounter={onIncrementCounter} />
 
         <Input
@@ -82,12 +86,15 @@ useEffect(() => {
           onBlur={onBlur}
           className={inputClass}
           name='Task'
-        />
+        /> */}
 
       </ >
+
+   
+    <Custom/>
     </Router>
 
-
+    
   )
 }
 

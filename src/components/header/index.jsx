@@ -9,6 +9,9 @@ export const NavBar = () => {
     const [isOpen, setOpen] = useState(false);
     const [isLargeScreen, setIsLargeScreen] = useState(window.innerWidth >= 768);
 
+
+
+
     const toggleMenu = () => {
         setOpen(!isOpen);
     };
@@ -29,27 +32,41 @@ export const NavBar = () => {
     }, []);
 
     return (
+
+
         <div className='nav'>
             <li className='navTitle'>Aterrizar</li>
             {isLargeScreen ? (
                 <ul className='navList'>
                     <li onClick={() => navigate('/vuelos')}>Vuelos</li>
-                    <li onClick={()=> navigate('/contact')} >Contacto</li>
+                    <li onClick={() => navigate('/contact')} >Contacto</li>
+            <div className='customer'>
+                <ul>
+                    {data?.map((user) => {
+                        <li key={user.id}>{user.username}</li>
+                    })}
+                </ul>
+            </div>
                 </ul>
             ) : (
                 <Hamburger
                     toggled={isOpen} toggle={toggleMenu}
                     duration={0.8}
                     color="#4FD1C5"
-                    />
-                    )}
+                />
+            )}
 
             {isOpen && !isLargeScreen && (
                 <ul className='navList'>
                     <li onClick={() => navigate('/vuelos')}>Vuelos</li>
-                    <li onClick={()=> navigate('/contact')} >Contacto</li>
+                    <li onClick={() => navigate('/contact')} >Contacto</li>
                 </ul>
             )}
+
+
         </div>
+
+
+
     );
 };

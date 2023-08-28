@@ -27,6 +27,8 @@ export const Input = ({
             <label htmlFor={id}>
                 {name}
             </label>
+       
         </div>
+
     )
 }
