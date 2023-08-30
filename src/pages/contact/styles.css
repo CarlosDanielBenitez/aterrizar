@@ -2,9 +2,8 @@
 
 .contact-form {
     max-width: 400px;
-    margin: 0 auto;
+    margin: 20px auto;
     padding: 20px;
-    padding-top: 35%;
     border: 1px solid #ccc;
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);

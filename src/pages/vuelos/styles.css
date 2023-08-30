@@ -1,22 +1,59 @@
-.flightsContainer{
-display: flex;
-flex-direction: column;
-padding-top: 35%;
-row-gap: 2rem;
-padding-left: 10px;
-}
+/* styles.css */
 
-.flightsDestinations{
-display: flex;
-flex-direction: column;
-row-gap: .5rem;
-padding-bottom: 1rem;
-}
+.flightsContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    margin: 20px auto;
 
-.flightsTickets{
-display: flex;
-flex-direction: column;
-row-gap: .5rem;
-
-}
-
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #f7f7f7;
+  }
+  
+  .flightsDestinations,
+  .flightsTickets {
+    flex: 1;
+    padding: 10px;
+  }
+  
+  .flightsDestinations {
+    border-right: 1px solid #ccc;
+    margin-right: 20px;
+  }
+  
+  h2 {
+    margin-top: 0;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  select {
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+  }
+  
+  button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  h3 {
+    margin-top: 10px;
+  }
+  

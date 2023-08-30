@@ -1,3 +1,42 @@
-.customer{
-    padding-top: 300px;
+
+/* customerSupportStyles.css */
+.customer {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.customer ul {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.5rem;
+  list-style: none;
+  padding: 0;
+}
+.callCenterData{
+  display: flex;
+  flex-direction: column;
+}
+
+.customer li {
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+.customer li:last-child {
+  margin-bottom: 0;
+}
+
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+}
+
+.loading-text {
+  font-size: 18px;
 }

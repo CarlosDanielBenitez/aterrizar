@@ -5,7 +5,7 @@ const Vuelos = () => {
   // Estado para almacenar los valores de entrada y el total
   const [start, setStart] = useState('');
   const [destination, setDestination] = useState('');
-  const [adults, setAdults] = useState(1);
+  const [adults, setAdults] = useState(0);
   const [children, setChildren] = useState(0);
   const [total, setTotal] = useState(0);
 

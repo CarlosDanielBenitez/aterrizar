@@ -40,13 +40,7 @@ export const NavBar = () => {
                 <ul className='navList'>
                     <li onClick={() => navigate('/vuelos')}>Vuelos</li>
                     <li onClick={() => navigate('/contact')} >Contacto</li>
-            <div className='customer'>
-                <ul>
-                    {data?.map((user) => {
-                        <li key={user.id}>{user.username}</li>
-                    })}
-                </ul>
-            </div>
+                    <li onClick={() => navigate('/custom')}>Customer Support</li>
                 </ul>
             ) : (
                 <Hamburger
@@ -60,6 +54,7 @@ export const NavBar = () => {
                 <ul className='navList'>
                     <li onClick={() => navigate('/vuelos')}>Vuelos</li>
                     <li onClick={() => navigate('/contact')} >Contacto</li>
+                    <li onClick={() => navigate('/custom')}>Customer Support</li>
                 </ul>
             )}
 
